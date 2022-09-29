@@ -1,0 +1,23 @@
+
+<div class="container">
+    <% if(personas.length){ %> 
+    <table   class="table table-primary">
+        <thead>
+            <tr class="table-dark">
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <% personas.forEach(persona => { %>
+            <tr > 
+                <td class="table-info"><%= persona.nombre %></td>
+                <td class="table-success"><%= persona.apellido %></td>
+                <td class="table-warning"><%= persona.edad %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <% } else { %>
+        <p>No se encontraron datos</p>
+    <% } %> 
+</div>

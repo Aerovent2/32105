@@ -1,0 +1,13 @@
+html
+    include include/head.pug
+    body
+    div(class="container  mt-3") 
+        h1 Cargar Nuevo Producto
+        a(href="/productos" class="btn btn-primary mb-3") ver productos
+        form(action="/productos" method="post" class="row g-3")
+            input(type="text" placeholder="Ingrese titulo" name="title" class="form-control")
+            input(type="text" placeholder="Ingrese url imagen" name="thumbnail" class="form-control")
+            input(type="number" placeholder="Ingrese precio" name="price" class="form-control")
+            input(type="submit" value="enviar" class="btn btn-primary mb-3")
+
+

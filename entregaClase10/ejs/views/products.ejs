@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./include/head.ejs') %>
+<body>
+    <h1>View Productos</h1>
+    <div class="container mt-3">
+        <a href="/" class="btn btn-primary mb-3">Cargar Productos</a>
+        <% if(productos.length >0){ %>
+            <table  class="table table-primary" align="center">
+                <thead>
+                    <tr class="table-dark">
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Miniatura</th>
+                    </tr>
+                </thead>
+                <% productos.forEach(producto => { %>
+                    <tr> 
+                        <td class="table-info"><%= producto.title%></td>
+                        <td class="table-success"> <%= producto.price%></td>
+                        <td class="table-warning"><img src="<%= producto.thumbnail%>" alt="imagen"/></td>
+                    </tr>
+                <% }) %>
+            </table>
+        <% } else { %>
+        <p>No hay productos cargados</p>
+        <% } %>
+
+    </div>
+
+</body>
+</html>

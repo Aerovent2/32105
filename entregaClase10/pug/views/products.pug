@@ -1,0 +1,21 @@
+html
+    include include/head.pug
+    body
+        div(class="container  mt-3")
+            h1 View Productos
+            a(href="/" class="btn btn-primary mb-3") Cargar Productos
+            if productos
+                table(class="table table-primary" align="center")
+                        thead
+                            tr(class="table-dark")
+                                th Producto
+                                th Precio
+                                th Miniatura
+                        each producto in productos
+                            tr 
+                                td(class="table-info")= producto.title
+                                td(class="table-success")=producto.price
+                                td(class="table-warning")
+                                    img(src=producto.thumbnail)
+            else
+                p No hay productos cargados
