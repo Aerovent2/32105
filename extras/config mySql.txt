@@ -1,0 +1,27 @@
+C:\xampp\mysql\bin>mysql -u root
+
+
+show databases
+
+use mibase*  //nombre de la database//
+
+show tables
+
+show columns from usuarios*	//nombre de la table//
+
+
+insert into usuarios (nombre,apellido,edad,email) values ('eduardo', 'miquilena' 23, 'eduardo@hola.com'), ('leonardo', 'heffel' 34, 'leo@hola.com')
+
+select * from usuarios
+
+
+select nombre from usuarios
+
+select nombre from usuarios where edad < 32 and id ='2'
+
+select count(id) from usuarios
+
+delete from usuarios where id ='2'
+
+
+update usuarios set edad = 23 where id = 3
