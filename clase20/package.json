@@ -1,5 +1,5 @@
 {
-  "name": "clase19",
+  "name": "clase20",
   "version": "1.0.0",
   "type": "module",
   "description": "",
@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^6.7.0"
+    "firebase-admin": "^11.2.0",
+    "mongoose": "^6.6.6"
   }
 }
