@@ -1,1 +1,4 @@
 mongod --auth --dbpath ./data
+
+
+"mongodb+srv://Aerovent2:PmslOif8zFcPUMEO@cluster0.ukiygmp.mongodb.net/productos"

@@ -1,0 +1,29 @@
+{
+  "name": "enrtregaclase8",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aerovent2/enrtregaClase8.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aerovent2/enrtregaClase8/issues"
+  },
+  "homepage": "https://github.com/Aerovent2/enrtregaClase8#readme",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "connect-mongo": "^4.6.0",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "normalizr": "^3.6.2",
+    "socket.io": "^4.5.2"
+  }
+}
