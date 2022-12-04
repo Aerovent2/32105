@@ -40,7 +40,7 @@ app.use(express.static('views'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(session({
-    secret:'passwordSupersecreta',
+    secret:process.env.SECRET_SESSION,
     resave:true,
     rolling:true, //resetea el tiempo de expiracion al tener session activa
     saveUninitialized:false,
