@@ -13,10 +13,11 @@ import routerRandom from "./routers/routerRandom.js"
 import cluster from "cluster"
 import { cpus } from "os"
 
-const{modo}=ParseArgs(process.argv.slice(2))
-const PORT = process.argv[2] || 8080
+let{modo}=ParseArgs(process.argv.slice(2))
+const PORT = process.argv[2] || 8081
+let serverExpress
 
-const serverExpress = ()=>{
+const serverExpressFull = ()=>{
     dotenv.config()
 
     const app = express()
@@ -39,7 +40,17 @@ const serverExpress = ()=>{
     httpServer.listen(PORT, ()=>{console.log(`servidor con pid ${process.pid} escuchando en el puerto ${httpServer.address().port}`)})
 
 }
+const serverExpressRandom = ()=>{
+    const app = express()
+    const httpServer= new HTTPServer(app)
+    app.use('/',routerRandom)
+    httpServer.listen(PORT, ()=>{console.log(`servidor con pid ${process.pid} escuchando en el puerto ${httpServer.address().port}`)})
+}
 
+if(PORT==8083){
+    modo='cluster'
+    serverExpress=serverExpressRandom
+}else serverExpress=serverExpressFull
 
     if(modo === 'cluster'){
         if(cluster.isPrimary){
