@@ -1,0 +1,5 @@
+artillery quick \
+    --count 50  \
+    --num 20    \
+    http://localhost:8081/info \
+    --output cluster.txt
