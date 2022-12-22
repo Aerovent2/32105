@@ -5,7 +5,9 @@
   "type": "module",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bench": "0x main.js",
+    "bench2": "0x main.js 8082 --modo=cluster"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   "homepage": "https://github.com/Aerovent2/enrtregaClase8#readme",
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
+    "autocannon": "^7.10.0",
     "bcrypt": "5.1.0",
     "compression": "^1.7.4",
     "connect-mongo": "^4.6.0",

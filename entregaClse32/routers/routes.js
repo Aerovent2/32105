@@ -58,7 +58,7 @@ router.get('/user',auth, (req,res)=>{
 
 const cpu = cpus()
 
-router.get('/info',compression(),(req,res)=>{
+router.get('/info',(req,res)=>{
    let info ={
     process: cpu.length,
     args:process.argv.slice(2),
