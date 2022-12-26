@@ -15,7 +15,7 @@ import logger from "./logs/logger.js"
 //import { cpus } from "os"
 
 let{modo}=ParseArgs(process.argv.slice(2))
-const PORT = process.argv[2] || 8081
+const PORT = process.env.PORT|| 8081
 
 
 
@@ -49,7 +49,7 @@ const serverExpress = ()=>{
     })
     DBConnect()
     httpServer.listen(PORT, ()=>{logger.info(`servidor con pid ${process.pid} escuchando en el puerto ${httpServer.address().port}`)})
-
+    httpServer.on('error',error=>logger.error(`Error en servidor ${error}`))
 }
 
     if(modo === 'cluster'){
