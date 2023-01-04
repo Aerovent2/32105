@@ -31,3 +31,4 @@ const email = "alysa.powlowski@ethereal.email"
 
 const info = await run({subject,html,email})
 console.log(info)
+// node desafio1 "hola mundo" "<h1>contenido html</h1>"
